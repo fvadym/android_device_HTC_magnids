@@ -1,0 +1,29 @@
+USE_CAMERA_STUB := true
+
+# inherit from the proprietary version
+-include vendor/htc/magnids/BoardConfigVendor.mk
+
+TARGET_ARCH := arm
+TARGET_NO_BOOTLOADER := true
+TARGET_BOARD_PLATFORM := unknown
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_ARCH_VARIANT := armv7-a-neon
+ARCH_ARM_HAVE_TLS_REGISTER := true
+
+TARGET_BOOTLOADER_BOARD_NAME := magnids
+
+BOARD_KERNEL_CMDLINE := †F|íü˘‚‰„¨íc¯t£%Ûrqˆÿ1¡^ÃÆ‚øB°±◊sTe9¯øLƒìU◊A≈yÄ◊ö>”¥hÅT1«@tı#c)∞æh›B—1[kú‚{Næz√)’,d»†ÜﬁÏ—∂‡çÅÜ
+BOARD_KERNEL_BASE := 0x4d51c0d6
+BOARD_KERNEL_PAGESIZE := -502739602
+
+# fix this up by examining /proc/mtd on a running device
+BOARD_BOOTIMAGE_PARTITION_SIZE := 0x105c0000
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 0x105c0000
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 0x105c0000
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
+BOARD_FLASH_BLOCK_SIZE := 131072
+
+TARGET_PREBUILT_KERNEL := device/htc/magnids/kernel
+
+BOARD_HAS_NO_SELECT_BUTTON := true
